@@ -1,0 +1,14 @@
+LoadModule dav_svn_module     modules/mod_dav_svn.so
+LoadModule authz_svn_module   modules/mod_authz_svn.so
+<location /svn>
+DAV svn
+#SVNPath
+SVNParentPath <%= @subversion_project_directory %>
+AuthType Basic
+AuthName "Authorization Realm"
+#password file path
+AuthUserFile <%= @subversion_project_directory %>/<%= @project_name %>/newrep.users
+Require valid-user
+</location>
+ServerName <%= @servername %>:<%= @httpd_port %>
+

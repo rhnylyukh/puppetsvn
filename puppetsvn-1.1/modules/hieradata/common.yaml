@@ -1,0 +1,3 @@
+---
+profile::subversion::project_name: 'foobar'
+profile::subversion::httpd_port: '80'

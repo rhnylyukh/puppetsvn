@@ -1,0 +1,16 @@
+---
+version: 5
+
+defaults:
+  datadir: hieradata
+  data_hash: yaml_data
+
+hierarchy:
+  - name: "Secret data"
+    lookup_key: eyaml_lookup_key
+    path: "common.eyaml"
+    options:
+      pkcs7_private_key: /etc/puppetlabs/code/environments/production/keys/private_key.pkcs7.pem
+      pkcs7_public_key: /etc/puppetlabs/code/environments/production/keys/public_key.pkcs7.pem
+  - name: "Common"
+    path: "common.yaml"  
