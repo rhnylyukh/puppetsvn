@@ -32,7 +32,7 @@ cp -Rp * %{buildroot}/etc/puppetlabs/code/environments/production/
 
 %files
 %attr(0755,root,root)
-%{buildroot}/etc/puppetlabs/code/environments/production/
+#%{buildroot}/etc/puppetlabs/code/environments/production/
 /*
 
 %clean
